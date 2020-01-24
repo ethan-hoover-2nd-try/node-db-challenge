@@ -118,7 +118,7 @@ router.post('/:id/tasks', validateProjectId, validateTask, (req, res) => {
         res.status(201).json(task);
     })
     .catch(error => {
-        res.status(500).json({ errorMessage: 'Failed to add task' })
+        res.status(500).json({ errorMessage: 'Something went wrong while attempting to add tasks to project' })
     })
 })
 
